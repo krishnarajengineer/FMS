@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #bd2626;
+    --secondary-color: #be0000;
+    --white: #ffffff;
+    --gray: #d3d3d3;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: var(--gray);
+    transition: background-color 0.3s ease;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: width 0.3s ease;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 1rem 0;
+}
+
+.sidebar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 2rem;
+    width: calc(100% - 250px);
+}
+
+.widgets {
+    display: flex;
+    gap: 1rem;
+}
+
+.widget {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.widget:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.widget h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.widget p {
+    font-size: 2rem;
+    font-weight: bold;
+}

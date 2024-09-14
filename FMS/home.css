@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.home-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #bd2626, #be0000);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background-pattern.png') repeat;
+    opacity: 0.2;
+    z-index: 1;
+    filter: blur(8px);
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.text {
+    color: #ffffff;
+    max-width: 50%;
+}
+
+.text h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: #bd2626;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #bd2626;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.features, .testimonials, .cta {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.features .container, .testimonials .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-item, .testimonial-item {
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item i, .testimonial-item p {
+    font-size: 2rem;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
