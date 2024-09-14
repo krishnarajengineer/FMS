@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--gray-2); /* Light gray background */
+    display: flex;
+}
+:root {
+    --primary-color: #bd2626;
+    --secondary-color: #be0000;
+    --white: #ffffff;
+    --gray: #d3d3d3;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--primary-color); /* Primary red color for sidebar */
+    color: var(--white); /* White text color */
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--white); /* White text color for sidebar heading */
+}
+
+.sidebar-nav {
+    margin-top: 2rem;
+}
+
+.sidebar-nav a {
+    display: block;
+    color: var(--white); /* White text color for nav links */
+    text-decoration: none;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
+    background-color: var(--secondary-color); /* Secondary red color for active/hover state */
+    color: var(--white); /* White text color for active/hover state */
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.header {
+    background-color: var(--white); /* White background for header */
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray); /* Gray border for header */
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--primary-color); /* Primary red color for header text */
+}
+
+.report-section {
+    background-color: var(--white); /* White background for report section */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--primary-color); /* Primary red color for section heading */
+}
+
+.report-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.report-card {
+    background-color: var(--gray); /* Light gray background for report cards */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.report-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.report-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color); /* Primary red color for card headings */
+}
+
+.report-card p {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--black); /* Black color for card text */
+}
